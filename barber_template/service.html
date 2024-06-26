@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberShop</title>
+    <link rel="stylesheet" href="service.css">
+</head>
+<navbar class="navbar">
+    <a class="logo" href="index.html">
+        <img class="logo-img" src="logo.png">
+    </a>
+    <span class="h1" data-text="BarberShop"></span>
+    <script>
+        window.addEventListener("scroll", function() {
+            var navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("scrolled", window.scrollY > 0);
+        });
+    </script>
+</navbar>
+<body>
+    <div class="hasábok">
+        <div class="hasáb" id="hair" onclick="toggleContent('hajvágás')">
+            <h1>Hajvágás</h1>
+            <div class="blockhair">
+                <a href="barber.html"></a>
+            </div>
+        </div>
+        <div class="hasáb" id="beard" onclick="toggleContent('borotválás')">
+            <h1>Borotválás</h1>
+            <div class="blockbeard">
+                <a href="barber.html"></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleContent(id) {
+            // Kiválasztott blokk megkeresése
+            var contentBlock = document.getElementById(id + 'Content');
+
+            // Ha a blokk látható, akkor elrejti, ha nem, akkor megjeleníti
+            contentBlock.style.display = (contentBlock.style.display === 'none' || contentBlock.style.display === '') ? 'block' : 'none';
+
+            // Elrejti az összes többi blokkot
+            hideOtherBlocks(id);
+        }
+
+        function hideOtherBlocks(id) {
+            // Az összes blokk kivételével elrejti azokat
+            var blocks = document.querySelectorAll('.block');
+            blocks.forEach(function (block) {
+                if (block.id !== id + 'Content') {
+                    block.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

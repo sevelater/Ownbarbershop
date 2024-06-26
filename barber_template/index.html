@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Template</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<nav class="navbar">
+    <a class="logo" href="index.html">
+        <img class="logo-img" src="logo.png">
+    </a>
+    <span class="h1" data-text="BarberShop"></span>
+</nav>
+<header>
+    <h1>"Olyan mint egy délutáni sörözés"</h1>
+    <p>- valami görög filozófus</p>
+    <div class="headline">
+
+    </div>
+</header>
+<body>
+    <section class="hasábok">
+        <div class="hasáb" id="service">
+            <a href="service.html">
+                <h2>Szolgáltatások</h2>
+            </a>
+            
+        </div>
+
+        <div class="hasáb" id="barber">
+                <a href="barber.html">
+                    <h2>Barberek</h2>
+                </a>
+        </div>
+
+        <div class="hasáb" id="time">
+                <a href="time.html">
+                    <h2>Időpontok</h2>
+                </a>
+        </div>
+        <script>
+            let lastScrollTop = 0;
+    
+            function handleIntersection(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && window.scrollY > lastScrollTop) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }
+    
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5
+            };
+    
+            const observer = new IntersectionObserver(handleIntersection, options);
+    
+            document.querySelectorAll('.hasáb').forEach(hasáb => {
+                observer.observe(hasáb);
+            });
+    
+            // Track scroll direction
+            window.addEventListener('scroll', function() {
+                const currentScrollTop = window.scrollY;
+                if (currentScrollTop > lastScrollTop) {
+                    // Scrolling down
+                    lastScrollTop = currentScrollTop;
+                } else {
+                    // Scrolling up
+                }
+            });
+        </script>
+    </section>
+
+    <section class="introduction">
+        <div class="texts">
+            <h4>Kis Történelem</h4>
+            <p>
+                j3ig3gr3guorgjougbn2ujn2eng2oginrgoirnefemfefgrogkjnergkorngrkoggergwrgknrgorngrognrg
+                oringrokgnrgoierngroiignrg
+                j3ig3gr3guorgjougbn2ujn2eng2oginrgoirnefemfefmgrogkjnergkorngrkoggergwrgknrgorngrognrg
+                oringrokgnrgoierngroiignrg
+                j3ig3gr3guorgjougbn2ujn2eng
+                grogkjnergkorngrkoggergwrgk
+                oringrokgnrgoierngroiignrg
+                j3ig3gr3guorgjougbn2ujn2en
+                grogkjnergkorngrkoggergwrgk
+                oringrokgnrgoierngroiignrg.
+            </p>
+        </div>
+        <div class="images">
+            <img id="top-image" src="introduction-shop.jpg">
+            <img id="bottom-image" src="sign.jpg">
+        </div>
+        
+    </section>
+</body>
+<footer>
+    
+</footer>
+</html>

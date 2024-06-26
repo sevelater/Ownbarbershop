@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@keyframes rainbowText {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 25px;
+}
+
+.h1::before {
+    margin-right: 40px;
+    font-size: 25px;
+    font-family: 'Alfa Slab One';
+    font-weight: 20;
+
+    content: attr(data-text);
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(115deg, #963131, #8b2424, #a3a3a3, #a3a3a3, #18519b, #18519b);
+}
+
+.logo-img {
+    max-block-size: 110px;
+    padding-left: 10px;
+
+    cursor: pointer;
+}
+
+header {
+    background-image: url(barber-shop.jpg);
+    background-position: center;
+    background-size: cover;
+
+    margin: 0;
+    padding: 0;
+
+    height: 300px;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 230px;
+    padding-bottom: 30px;
+}
+
+header h1 {
+    display: flex;
+    width: 60%;
+
+    font-size: 50px;
+    font-family:'Alfa Slab One';
+    letter-spacing: 8px;
+    font-weight: 50;
+    text-align: center;
+    margin-bottom: 20px;
+
+    color:rgb(206, 206, 206);
+}
+
+header p {
+    display: flex;
+    font-family: 'Alfa Slab One';
+    font-weight: 40;
+    letter-spacing: 3px;
+    font-size: 16px;
+
+    color:rgb(206, 206, 206);
+    margin-bottom: 186px
+}
+
+body {
+    font-family: 'Arial', sans-serif, "Alfa Slab One";
+    background-color: #6d6565;
+    color: #333;
+
+    text-align: center;
+    align-items: center;
+
+    margin: 0;
+    margin-bottom: auto;
+    padding: 0;
+}
+
+.hasábok {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 190px;
+
+    width: 100%;
+    height: 400px;
+
+    flex-grow: 1;
+
+    color: rgb(68, 68, 68);
+
+    justify-content: space-between;
+    display: inline-flex;
+    text-align: center;
+}
+
+.hasáb {
+    width: 18%;
+    height: 450px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     
+    transition: transform 0.16s ease-in-out;
+    cursor: pointer;
+    overflow: hidden; 
+
+    opacity: 1;
+    transition-duration: 0.4;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.hasáb:hover {
+    transform: scale(1.1);
+    transition: transform 0.35s ease-in-out opacity 0s ease-in-out;
+}
+
+.hasáb h2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    font-family:'Alfa Slab One';
+    font-weight: 30;
+    letter-spacing: 3px;
+    font-size: 30px;
+    
+    width: 100%;
+    height:100%
+}
+
+#service h2 {
+    color: #963131;
+}
+
+#barber h2 {
+    color: #c7c4c4;
+}
+
+#time h2 {
+    color: #18519b;
+}
+
+.hasáb a {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+#service {
+    background-image: url(service1.jpg);
+}
+
+#barber {
+    background-image: url(barber.jpg);
+}
+
+#time {
+    background-image: url(time.jpg);
+}
+
+.introduction {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 500px;
+
+    background-color: #4e4e4e;
+}
+
+.introduction h4 {
+    text-align: left;
+
+    padding-left: 90px;
+    padding-top: 70px;
+    font-size: 30px;
+    font-family: 'Alfa Slab One';
+    font-weight: 30;
+
+    color: #b8b8b8
+}
+
+.introduction p {
+    width: 600px;
+    word-wrap: break-word;
+
+    padding-left: 50px;
+    padding-top: 50px;
+
+    font-size: 20px;
+    text-align: left;
+
+    color: #a5a4a4
+}
+
+.images {
+    margin-top: -180px;
+    margin-right: -100px;
+    margin-left: 300px;
+
+    overflow: hidden;
+}
+
+#top-image {
+    border-radius: 15px;
+
+    margin-left: 350px;
+    max-inline-size: 40%;
+    z-index: 2;
+}
+
+#bottom-image {
+    max-inline-size: 40%;
+
+    border-radius: 15px;
+
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: -80px;
+
+    z-index: 1;
+}
